@@ -1,0 +1,104 @@
+
+	<!-- footer -->
+	<div class="w3l-footer">
+		<div class="container">
+			<div class="footer-w3logo"> 
+				<a href="/Home">Event Management System (EMS)</a>
+			</div>
+			<div class="right-social">
+				<div class="social-icon">
+					<a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+					<a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a> 
+					<a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a> 
+					<a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a> 
+				</div> 	
+			</div>
+			<div class="clearfix"></div>
+			<div class="footer-nav"> 
+				<ul>
+					<li><a href="/" class="active">Home</a></li> 
+								
+								<li><a href="#services" class="scroll">Events Categories</a></li>
+								
+								<li><a href="#blog" class="scroll">Upcoming Events</a></li>
+                                <li><a href="#about" class="scroll">About Us</a></li>
+					<li><a href="/Account/login" >Login</a></li>
+				
+				</ul>
+			</div>
+			<div class="copyright-agile">
+				<p>&copy; 2023 Event Planning Management System. All rights reserved | Developed by <a href="/Home">EPMS</a></p>
+			</div>
+		</div>
+	</div>
+	<!-- //footer --> 
+	<!-- js --> 
+	<script src="/static/Home/js/jquery-2.2.3.min.js"></script> 
+	<script src="/static/Home/js/SmoothScroll.min.js"></script> 
+	<script src="/static/Home/js/jarallax.js"></script> 
+	<script type="text/javascript">
+		/* init Jarallax */
+		$('.jarallax').jarallax({
+			speed: 0.5,
+			imgWidth: 1366,
+			imgHeight: 768
+		})
+	</script>  
+	<!-- //js --> 
+	<!-- FlexSlider --> 
+	<script defer src="/static/Home/js/jquery.flexslider.js"></script>
+	<script type="text/javascript">
+		$(window).load(function(){
+		  $('.flexslider').flexslider({
+			animation: "slide",
+			start: function(slider){
+			  $('body').removeClass('loading');
+			}
+		  });
+		});
+	</script>
+	<!-- //End-FlexSlider -->  
+	<!-- swipe box js -->
+	<script src="/static/Home/js/jquery.swipebox.min.js"></script> 
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+	</script>
+	<!-- //swipe box js -->
+	<!-- start-smooth-scrolling --> 
+	<script type="text/javascript" src="/static/Home/js/move-top.js"></script>
+	<script type="text/javascript" src="/static/Home/js/easing.js"></script>	
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+			
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+	<!-- //end-smooth-scrolling -->	 
+	<!-- smooth-scrolling-of-move-up -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			*/
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+	</script>
+	<!-- //smooth-scrolling-of-move-up -->   
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/static/Home/js/bootstrap.js"></script>
+</body>
+</html>

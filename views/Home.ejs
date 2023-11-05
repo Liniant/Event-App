@@ -1,0 +1,182 @@
+<%-include('layout/Home/header')-%>
+			<!-- banner-text -->
+			<div class="banner-text agileinfo"> 
+				<div class="container">
+					<div class="flexslider">
+						<ul class="slides">
+							<li> 
+								<div class="banner-w3lstext">   
+									<h3>Professional & <br> Exclusive Events</h3> 
+									<h4>PLANNING<br>THE BEST EVENT FOR YOU</h4>  
+								</div>
+							</li> 
+							<li>
+								<div class="banner-w3lstext">   
+									<h3>Social & <br>Networking Events</h3>
+									<h4>TEAM <br>BUILDING AND GET TO KNOW YOUR COLLEAGUE</h4>  
+								</div>
+							</li>
+							<li>
+								<div class="banner-w3lstext">   
+									<h3>On Campus & <br>all students events</h3>  
+									<h4>BE PART<br> OF A BETTER TOMORROW</h4>  
+								</div>
+							</li>
+						</ul> 
+					</div> 	 
+				</div>
+			</div>
+			<!-- //banner-text -->  
+			<!-- arrow bounce --> 
+			<div class="agileits-arrow bounce animated"><a href="#services" class="scroll"><i class="fa fa-angle-down" aria-hidden="true"></i></a></div>
+			<!-- //arrow bounce -->  
+		</div>
+	</div>
+	<!-- //banner --> 
+	
+	<!-- services -->
+	<div id="services" class="about-w3agile">  
+		<div class="services-grids"> 
+			<div class="col-md-3 col-xs-3 serv-agileinfo view view-ninth">
+				<img src="/static/Home/images/item8.png" class="img-responsive" alt=""/>
+				<div class="mask mask-1"></div>
+				<div class="mask mask-2"></div>
+				<div class="content">
+					<h5>Professional Events</h5>
+					<p>Bringing you nothing but the best event</p>
+				</div>
+			</div> 
+			<div class="col-md-3 col-xs-3 serv-agileinfo serv-w3text">
+				<h3>10+</h3>
+				<p>Be among the first 10 to join these different categorised events.</p>
+			</div> 
+			<div class="col-md-3 col-xs-3 serv-agileinfo view view-ninth agileits-w3layouts">
+				<img src="/static/Home/images/item6.png" class="img-responsive" alt=""/>
+				<div class="mask mask-1"></div>
+				<div class="mask mask-2"></div>
+				<div class="content">
+					<h5>Social Events</h5>
+					<p>Get together and know one another through team building events</p>
+				</div>
+			</div>
+			<div class="col-md-3 col-xs-3 serv-agileinfo serv-w3text">
+				<h3 class="works ser-wthreetext">Here's some of our latest events</h3>
+			</div>
+			<div class="clearfix"> </div>
+		</div>	
+		<div class="services-grids agileits-w3layouts">	 
+			<div class="col-md-3 col-xs-3 serv-agileinfo serv-w3text">
+				<h3 class="ser-wthreetext">20+</h3>
+				<h4>EVENTS CREATED EVERY MONTH</h4>
+			</div>
+			<div class="col-md-3 col-xs-3 serv-agileinfo view view-ninth">
+				<img src="/static/Home/images/item2.png" class="img-responsive" alt=""/>
+				<div class="mask mask-1"></div>
+				<div class="mask mask-2"></div>
+				<div class="content">
+					<h5>On Campus Events</h5>
+					<p>For every campus event we got you covered</p>
+				</div>
+			</div> 
+			<div class="col-md-3 col-xs-3 serv-agileinfo serv-w3text">
+				<h3>LATEST EVENTS</h3>
+			</div>
+			<div class="col-md-3 col-xs-3 serv-agileinfo view view-ninth">
+				<img src="/static/Home/images/g4.jpg" class="img-responsive" alt=""/>
+				<div class="mask mask-1"></div>
+				<div class="mask mask-2"></div>
+				<div class="content">
+					<h5>Couples Events</h5>
+					<p>A wonderful serenity has taken possession of my entire soul</p>
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!-- //services -->
+	
+
+
+	<!-- blog -->
+	<div id="blog" class="blog services agile-blog">
+		<div class="container"> 
+			<h3 class="w3ls_head">UPCOMING EVENTS</h3>
+			<p class="w3agile">Be the first to join these exciting events and start to participate and even create your own planned and organized event for others to join and participate.</p>
+			<% if (events != '') { %>
+                <% events.forEach((row,index) => {%>
+            <div class="col-md-6 w3lsblog-grid">
+              
+				<div class="blog-w3top">
+					<h5>Date: <%= row.eventdate %></h5>
+				</div>
+				<div class="blog-left"> 
+					<a href="#myModal" data-toggle="modal" class="wthree-almub" style="background-image: url(<%=row.image%>);" >  
+					</a>
+					
+				</div>
+				<div class="blog-right">
+					<h4><a href="#myModal" data-toggle="modal"><%= row.name %></a></h4>
+					<p><%= row.description %></p>
+					<a class="w3more" href="#myModal" data-toggle="modal"><i class="fa fa-mail-forward" aria-hidden="true"></i> More</a>  <i class="fas fa-heart text-muted p-md-1 my-1 me-0" data-mdb-toggle="tooltip" data-mdb-placement="top"
+                    title="I like it"></i>
+				</div>
+				<div class="clearfix"></div>
+              
+			</div>
+            <%  }) %>
+            <% } else{ %><h1 class="text-center text-secondary mt-5"> No Upcoming events at the moment</h1>
+            <% } %>
+			<div class="clearfix"></div>  
+		</div>
+	</div>
+	<!--- //blog -->  
+    <!-- about -->
+	<div id="about" class="about-w3agile">
+		<div class="container">
+			<h2 class="w3ls_head">Welcome </h2>
+			<p class="w3agile">Event Planning Management System (EMS) is a  platform for live experiences that allows anyone with an account to create,participate, find and attend events that fuel their passions and enrich their lives.From music festivals, marathons, conferences, community service, and fundraisers, to gaming competitions and lip singing contests. Our mission is to bring Alumins together through live experiences.</p>
+			<div class="abt-agile-info">
+				<div class="col-sm-4 abt-agile-info-left">
+					<div class="agile-info-first agileits">
+						<i class="fa fa-heart-o icon featured" aria-hidden="true"></i>
+						<h4>Social Networking</h4>
+						<p>Be part of the excitement.</p>
+					</div>
+				</div>
+				<div class="col-sm-4 abt-agile-info-left">
+					<div class="agile-info-middle agileits">
+						<i class="fa fa-tv icon featured" aria-hidden="true"></i>
+						<h4>PROFESSIONAL</h4>
+						<p>Join the Professionals to start prepare for your career.</p>
+					</div>
+				</div>
+				<div class="col-sm-4 abt-agile-info-left">
+					<div class="agile-info-last agileits">
+						<i class="fa fa-clone icon featured" aria-hidden="true"></i>
+						<h4>ON CAMPUS</h4>
+						<p>Be the first Alumin to take an initiative towards a positive change through on campus events.</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //about-w3agile --> 
+	<!-- modal -->
+	<div class="modal about-modal w3-agileits fade" id="myModal" tabindex="-1" role="dialog">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+				</div> 
+				<div class="modal-body">
+					
+					<h5>You cannot view this event.</h5>
+					<p>these events can only be joined by those who have already created an account to start participate so please login or register to start participate</p>
+				</div> 
+			</div>
+		</div>
+	</div>
+	<!-- //modal -->  
+
+    <%-include('layout/Home/footer')-%>

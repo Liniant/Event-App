@@ -1,0 +1,70 @@
+<%-include('../layout/User/header')-%>
+  
+        <!-- row -->
+        <div class="row tm-mt-big">
+            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                <div class="bg-white tm-block">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="text-center my-3"> All Created Events </h3>
+                            <% if (message) { %>
+                             <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                                <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                                <strong><%= message.message %></strong>
+                             </div>
+                            <% } %>
+                        </div>
+                       
+                    </div>
+                    <div class="row mt-4 tm-edit-product-row">
+                        <div class=" col-md-12">
+                            <div class="table-responsive">
+                                <% if (events != '') { %>
+                                    <table class="table table-striped text-center my-3">
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th>ID</th>
+                                                <th>Category</th>
+                                                <th>Name</th>
+                                                
+                                                <th>Venue</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                           <tbody>
+                                          <% events.forEach((row,index) => {%>
+                                            <tr class="align-middle">
+                                                <td><%= index %></td>
+                                                <td><%= row.catergory %></td>
+                                                <td><%= row.name %></td>
+                                                
+                                              
+                                                <td><%= row.venue %></td>
+                                                <td><%= row.eventdate %></td>
+                                                <td><%= row.time %></td>
+                                               
+                                                <td><a href="/Main/edit_events/<%= row._id %>" class="text-success"><i class="fas fa-edit fa-lg mx-1"></i></a>
+                                                    <a href="/delete_events/<%= row._id %>" class="text-danger"><i class="fas fa-trash fa-lg mx-1"></i></a>
+                                                </td>
+                                            </tr>
+                    
+                                        <%  }) %>
+                                           </tbody>
+                                    </table>
+                                <% } else{ %>
+                    <h1 class="text-center text-secondary mt-5"> No events found.</h1>
+                                    <% } %>
+                               
+                               </div>
+                               
+                               </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-include('../layout/User/footer')-%>

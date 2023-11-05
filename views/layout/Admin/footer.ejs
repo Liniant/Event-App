@@ -1,0 +1,63 @@
+<footer class="row tm-mt-big">
+    <div class="col-12 font-weight-light">
+        <p class="d-inline-block tm-bg-black text-white py-2 px-4">
+            Copyright &copy; 2023 EPMS. 
+        </p>
+    </div>
+</footer>
+</div>
+
+<script src="/static/Admin/js/jquery-3.3.1.min.js"></script>
+<!-- https://jquery.com/download/ -->
+<script src="/static/Admin/jquery-ui-datepicker/jquery-ui.min.js"></script>
+<!-- https://jqueryui.com/download/ -->
+<script src="/static/Admin/js/bootstrap.min.js"></script>
+
+<!-- https://jquery.com/download/ -->
+<script src="/static/Admin/js/moment.min.js"></script>
+<!-- https://momentjs.com/ -->
+<script src="/static/Admin/js/utils.js"></script>
+<script src="/static/Admin/js/Chart.min.js"></script>
+
+<!-- https://fullcalendar.io/ -->
+<script src="js/bootstrap.min.js"></script>
+<!-- https://getbootstrap.com/ -->
+<script src="/static/Admin/js/tooplate-scripts.js"></script>
+    <!-- http://www.chartjs.org/docs/latest/ -->
+    <script src="/static/Admin/js/fullcalendar.min.js"></script>
+<script>
+$(function () {
+    $('#expire_date').datepicker();
+});
+</script>
+<script>
+    let ctxLine,
+        ctxBar,
+        ctxPie,
+        optionsLine,
+        optionsBar,
+        optionsPie,
+        configLine,
+        configBar,
+        configPie,
+        lineChart;
+    barChart, pieChart;
+    // DOM is ready
+    $(function () {
+        updateChartOptions();
+        drawLineChart(); // Line Chart
+        drawBarChart(); // Bar Chart
+        drawPieChart(); // Pie Chart
+        drawCalendar(); // Calendar
+
+        $(window).resize(function () {
+            updateChartOptions();
+            updateLineChart();
+            updateBarChart();
+            reloadPage();
+        });
+    })
+</script>
+</body>
+
+</html>
