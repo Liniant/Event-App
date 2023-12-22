@@ -1,0 +1,43 @@
+<%-include('header')-%>
+    <div class="container">
+    
+        <div class="row tm-mt-big">
+            <div class="col-6 mx-auto tm-login-col">
+                <div class="bg-white tm-block">
+                    <div class="row">
+            
+                        <div class="col-12 text-center">
+                            <% if (message) { %>
+                                <div class="alert alert-dismissible fade show alert-<%= message.type %>" role="alert">
+                                   <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close"></button>
+                                   <strong><%= message.message %></strong>
+                                </div>
+                               <% } %>
+                            <i class="fas fa-3x  fa-sign-in text-center"></i>
+                            <h2 class="tm-block-title mt-3">Login</h2>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                            <form action="/signin" method="post" class="tm-login-form">
+                                <div class="input-group">
+                                    <label for="email" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Username</label>
+                                    <input name="email" type="text" class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7" id="email" placeholder="youremail@gmail.com"  required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Password</label>
+                                    <input name="password" type="password" class="form-control validate" id="password" placeholder="*****" required>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <button type="submit" class="btn btn-primary d-inline-block mx-auto">Login</button>
+                                </div>
+                                <div class="input-group mt-3">
+                                    <p><em>You don't have an account? </em> </p><p></p> <span><li><a href="/Account/register" >  Register Now</a></li></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-include('footer')-%>

@@ -1,0 +1,60 @@
+<%-include('header')-%>
+    <div class="container">
+    
+        <div class="row tm-mt-big">
+            <div class="col-6 mx-auto tm-login-col">
+                <div class="bg-white tm-block">
+                    <div class="row">
+            
+                        <div class="col-12 text-center">
+                            <i class="fas fa-3x  fa-sign-in text-center"></i>
+                            <h2 class="tm-block-title mt-3">Sign Up for Free</h2>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12">
+                       
+            <form id="signup" method="post" action="/signup">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <label>First Name<span class="req">*</span> </label>
+                    <input type="text" class="form-control" id="first_name" name="first_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                  <div class="form-group">
+                    <label> Last Name<span class="req">*</span> </label>
+                    <input type="text" class="form-control" id="last_name"name="last_name" required data-validation-required-message="Please enter your name." autocomplete="off">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label> Your Email<span class="req">*</span> </label>
+                <input type="email" class="form-control" id="email" name="email" required data-validation-required-message="Please enter your email address." autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <label> Your Phone<span class="req">*</span> </label>
+                <input type="tel" class="form-control" id="phone" name="phone" required data-validation-required-message="Please enter your phone number." autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="form-group">
+                <label> Password<span class="req">*</span> </label>
+                <input type="password" class="form-control" id="password" name="password" required data-validation-required-message="Please enter your password" autocomplete="off">
+                <p class="help-block text-danger"></p>
+              </div>
+              <div class="mrgn-30-top">
+                <button type="submit" class="btn btn-larger btn-block"/>
+                Sign up
+                </button>
+              </div>
+            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%-include('footer')-%>
